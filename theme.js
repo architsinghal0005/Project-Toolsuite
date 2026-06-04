@@ -23,16 +23,13 @@ window.toggleTheme = function () {
 };
 
 function getSystemTheme() {
-    // Check if browser supports prefers-color-scheme media query
-    if (window.matchMedia) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        return prefersDark ? 'dark' : 'light';
-    }
-    return 'light'; // Fallback if not supported
+    return window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
 }
 
 function initTheme() {
-    // Priority: 1) localStorage (user preference) 2) system preference 3) light (fallback)
     const savedTheme = localStorage.getItem('theme');
     const theme = savedTheme || getSystemTheme();
     applyTheme(theme);
