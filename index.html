@@ -63,7 +63,31 @@ body.dark-mode {
             text-transform: uppercase;
             box-shadow: 4px 4px 0px var(--border);
             transition: transform 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
+        
+        .theme-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .theme-option.hidden {
+            display: none !important;
+        }
+        
+        .theme-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            stroke: white;
+            fill: none;
+        }
+        
         .dark-mode-toggle:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0px var(--border); }
 
         .principle-box {
@@ -207,6 +231,230 @@ body.dark-mode {
             aside { display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px; }
             .tag-item { width: auto; white-space: nowrap; }
         }
+        @media (max-width: 768px) {
+            .container { padding: 32px 20px; }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            header {
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+
+            .dark-mode-toggle,
+            #installBtn {
+                position: static;
+                width: 100%;
+            }
+
+            .dark-mode-toggle {
+                padding: 12px 16px;
+                font-size: .9rem;
+                margin-top: 15px;
+                justify-content: center;
+                box-shadow: 3px 3px 0 var(--border);
+            }
+
+            #installBtn {
+                margin-bottom: 10px !important;
+            }
+
+            .principle-box {
+                padding: 20px;
+                margin-bottom: 40px;
+                border: 2px solid var(--border);
+            }
+
+            .principle-box h2 { font-size: 1.3rem; }
+
+            .mini-cta,
+            .mini-cta-buttons {
+                flex-direction: column;
+            }
+
+            .mini-cta {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .mini-cta span,
+            .mini-cta-buttons a {
+                text-align: center;
+            }
+
+            .mini-cta-buttons,
+            .mini-cta-buttons a {
+                width: 90%;
+            }
+
+            .workspace {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            aside,
+            .tag-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            aside { margin-bottom: 20px; }
+
+            .tag-item {
+                width: auto;
+                padding: 8px 12px;
+                font-size: .85rem;
+                white-space: nowrap;
+            }
+
+            #toolSearch {
+                font-size: 1rem;
+                padding: 14px;
+                margin-bottom: 20px;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .tool-link {
+                padding: 16px;
+                font-size: .95rem;
+            }
+
+            footer {
+                margin-top: 60px;
+                padding: 30px 0;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            footer a {
+                font-size: .9rem;
+                padding: 4px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 16px 12px; }
+
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                letter-spacing: .02em;
+            }
+
+            header {
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+                border-width: 3px;
+            }
+
+            .dark-mode-toggle {
+                padding: 10px 14px;
+                font-size: .8rem;
+                box-shadow: 2px 2px 0 var(--border);
+            }
+
+            .theme-option { gap: 4px; }
+
+            .theme-icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .principle-box {
+                padding: 16px;
+                margin-bottom: 30px;
+            }
+
+            .principle-box h2 {
+                font-size: 1.1rem;
+                border-width: 2px;
+            }
+
+            .principle-box p {
+                font-size: .95rem;
+                line-height: 1.6;
+                margin: 8px 0;
+            }
+
+            .support-box { margin-bottom: 30px; }
+
+            .mini-cta {
+                padding: 12px;
+                gap: 12px;
+                border-width: 2px;
+            }
+
+            .mini-cta span { font-size: .9rem; }
+
+            .mini-cta-buttons a {
+                font-size: .8rem;
+                padding: 8px 12px;
+            }
+
+            aside h3 {
+                font-size: .7rem;
+                margin-bottom: 8px;
+            }
+
+            .tag-item {
+                padding: 6px 10px;
+                font-size: .75rem;
+                margin-bottom: 6px;
+                border-width: 2px;
+            }
+
+            #toolSearch {
+                font-size: .95rem;
+                padding: 12px;
+                margin-bottom: 15px;
+                border-width: 2px;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+            }
+
+            .tool-link {
+                padding: 12px;
+                font-size: .85rem;
+                border-width: 2px;
+            }
+
+            .tool-link:hover {
+                transform: translate(-3px, -3px);
+                box-shadow: 4px 4px 0 var(--border);
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 20px 0;
+            }
+
+            footer p {
+                font-size: .85rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-links { gap: 6px; }
+
+            footer a {
+                font-size: .75rem;
+                padding: 3px 8px;
+                border-width: 1px;
+            }
+        }
+
     </style>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="e2150d65-a009-409f-b3bd-b11afccb3a13"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760380500809289"
@@ -219,11 +467,30 @@ body.dark-mode {
         <h1>Project Toolsuite</h1>
         <button id="installBtn" class="dark-mode-toggle" style="right: 180px; display: none;">INSTALL APP</button>
         <button
-    class="dark-mode-toggle"
-    onclick="toggleTheme()"
-    id="themeBtn">
-    DARK MODE
-</button>
+        class="dark-mode-toggle"
+        onclick="toggleTheme()"
+        id="themeBtn">
+            <span class="theme-option dark-mode-option hidden">
+                <svg class="theme-icon-dark sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                LIGHT MODE
+            </span>
+            <span class="theme-option light-mode-option">
+                <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                DARK MODE
+            </span>
+        </button>
     </header>
 
     <section class="principle-box">
@@ -311,6 +578,7 @@ Your work stays yours.</p>
         { name: "Text to Speech", path: "tools/text-to-speech/tts.html", tags: ["Media", "Utilities"] },
         { name: "Bezier Curve Generator", path: "tools/bezier-generator/bezier.html", tags: ["Design", "Dev"] },
         { name: "Logic Gate Simulator", path: "tools/logic-simulator/logic.html", tags: ["Education", "Dev"] },
+        { name: "LinkedIn text formatter", path: "tools/linkedin-text-formatter/formatter.html", tags: ["Design", "Dev"] },
         { name: "Regex Crossword", path: "tools/regex-crossword/regex-crossword.html", tags: ["Education", "Dev"] },
         { name: "Diff Checker", path: "tools/diff-checker/diff.html", tags: ["Dev", "Utilities"] },
         { name: "CSS Clip-Path Generator", path: "tools/clip-path-generator/clip-path.html", tags: ["Design", "Dev"] },
@@ -332,6 +600,8 @@ Your work stays yours.</p>
         { name: "Archive Studio", path: "tools/archive-studio/archive_studio.html", tags: ["File"] },
         { name: "Vision Studio", path: "tools/vision-studio/vision_core.html", tags: ["Design"] },
         { name: "Mesh Studio", path: "tools/mesh-studio/mesh_core.html", tags: ["Dev"] },
+        { name: "Email Validator", path: "tools/email-validator/email-validator.html", tags: ["Dev", "Utilities"] },
+        { name: "CI/CD Visualizer", path: "tools/cicd-visualizer/cicd-visualizer.html", tags: ["Dev", "Design"] },
     ];
 
     let activeTag = 'all';
@@ -367,6 +637,27 @@ Your work stays yours.</p>
             const matchesTag = activeTag === 'all' || (t.tags && t.tags.includes(activeTag));
             return matchesSearch && matchesTag;
         });
+
+        if (query) {
+            filtered.sort((a, b) => {
+                const aName = a.name.toLowerCase();
+                const bName = b.name.toLowerCase();
+                
+                const aStarts = aName.startsWith(query);
+                const bStarts = bName.startsWith(query);
+                if (aStarts !== bStarts) return aStarts ? -1 : 1;
+                
+                const aWord = aName.includes(' ' + query);
+                const bWord = bName.includes(' ' + query);
+                if (aWord !== bWord) return aWord ? -1 : 1;
+                
+                const aIndex = aName.indexOf(query);
+                const bIndex = bName.indexOf(query);
+                if (aIndex !== bIndex) return aIndex - bIndex;
+                
+                return aName.localeCompare(bName);
+            });
+        }
 
         if (filtered.length === 0) {
             container.innerHTML = `<p style="grid-column: 1/-1; opacity: 0.5;">No tools found matching your criteria.</p>`;
@@ -409,10 +700,19 @@ function updateThemeButton() {
 
     if (!btn) return;
 
-    btn.textContent =
-        document.body.classList.contains('dark-mode')
-            ? 'LIGHT MODE'
-            : 'DARK MODE';
+    const isDark = document.body.classList.contains('dark-mode');
+    const darkModeOption = btn.querySelector('.dark-mode-option');
+    const lightModeOption = btn.querySelector('.light-mode-option');
+    
+    if (isDark) {
+        // Dark mode is active, show LIGHT option (sun + LIGHT text)
+        if (darkModeOption) darkModeOption.classList.remove('hidden');
+        if (lightModeOption) lightModeOption.classList.add('hidden');
+    } else {
+        // Light mode is active, show DARK option (moon + DARK text)
+        if (darkModeOption) darkModeOption.classList.add('hidden');
+        if (lightModeOption) lightModeOption.classList.remove('hidden');
+    }
 }
 
 function applyTheme(theme) {
