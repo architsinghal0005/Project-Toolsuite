@@ -16,6 +16,10 @@ class VectorEngine {
         this.selection = null; 
         this.dragStart = { x: 0, y: 0 };
         this.currentShape = null; 
+        this.dragStartState = null;
+
+        this.undoStack = [];
+        this.redoStack = [];
         
         // Init
         this.resize();
@@ -107,6 +111,16 @@ class VectorEngine {
     // --- INTERACTION ---
 
     setupEvents() {
+        window.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && !e.shiftKey && e.key.toLowerCase() === 'z') {
+                e.preventDefault();
+                this.undo();
+            } else if ((e.ctrlKey && e.key.toLowerCase() === 'y') || (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'z')) {
+                e.preventDefault();
+                this.redo();
+            }
+        });
+
         this.canvas.addEventListener('mousedown', (e) => {
             const mx = e.offsetX;
             const my = e.offsetY;
@@ -114,6 +128,7 @@ class VectorEngine {
             if (this.tool === 'select') {
                 const hit = this.hitTest(mx, my);
                 if (hit) {
+                    this.dragStartState = JSON.parse(JSON.stringify(this.shapes));
                     this.selection = hit;
                     this.isDragging = true;
                     // Store offset relative to shape origin
@@ -146,6 +161,7 @@ class VectorEngine {
                 } else if (this.tool === 'text') {
                     const text = prompt("Enter text:", "Label");
                     if (text) {
+                        this.saveState();
                         this.shapes.push({ type: 'text', x: sx, y: sy, text: text, ...style });
                         this.tool = 'select';
                         this.updateToolbar();
@@ -210,9 +226,18 @@ class VectorEngine {
                     if (s.w === 0 || s.h === 0) isValid = false;
                 }
                 
-                if (isValid) this.shapes.push(s);
+                if (isValid) {
+                    this.saveState();
+                    this.shapes.push(s);
+                }
                 this.currentShape = null;
+            } else if (this.tool === 'select' && this.isDragging && this.selection) {
+                if (this.dragStartState && JSON.stringify(this.shapes) !== JSON.stringify(this.dragStartState)) {
+                    this.undoStack.push(this.dragStartState);
+                    this.redoStack = [];
+                }
             }
+            this.dragStartState = null;
             this.isDragging = false;
         });
 
@@ -220,6 +245,7 @@ class VectorEngine {
         ['fillColor', 'strokeColor', 'strokeWidth'].forEach(id => {
             document.getElementById(id).addEventListener('change', (e) => {
                 if (this.selection) {
+                    this.saveState();
                     if (id === 'fillColor') this.selection.fill = e.target.value;
                     if (id === 'strokeColor') this.selection.stroke = e.target.value;
                     if (id === 'strokeWidth') this.selection.width = parseInt(e.target.value);
@@ -386,8 +412,30 @@ class VectorEngine {
         document.getElementById('strokeWidth').value = this.selection.width;
     }
 
+    saveState() {
+        this.undoStack.push(JSON.parse(JSON.stringify(this.shapes)));
+        this.redoStack = [];
+    }
+
+    undo() {
+        if (this.undoStack.length > 0) {
+            this.redoStack.push(JSON.parse(JSON.stringify(this.shapes)));
+            this.shapes = this.undoStack.pop();
+            this.selection = null;
+        }
+    }
+
+    redo() {
+        if (this.redoStack.length > 0) {
+            this.undoStack.push(JSON.parse(JSON.stringify(this.shapes)));
+            this.shapes = this.redoStack.pop();
+            this.selection = null;
+        }
+    }
+
     deleteSelected() {
         if (this.selection) {
+            this.saveState();
             this.shapes = this.shapes.filter(s => s !== this.selection);
             this.selection = null;
         }
@@ -395,6 +443,7 @@ class VectorEngine {
 
     clear() {
         if(confirm("Clear Canvas?")) {
+            this.saveState();
             this.shapes = [];
             this.selection = null;
         }
