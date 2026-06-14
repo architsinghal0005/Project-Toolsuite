@@ -158,13 +158,13 @@ See the `LICENSE` file for complete details.
 
 | Rank | Contributor | Points | Commits |
 |-----:|------------|-------:|--------:|
-| 1 | @Winter262005 | 243 | 243 |
+| 1 | @Winter262005 | 249 | 249 |
 | 2 | @VITianYash42 | 20 | 20 |
 | 3 | @rach-kanc | 14 | 14 |
 | 4 | @Dru-429 | 13 | 13 |
 | 5 | @AdityaMittal08 | 9 | 9 |
 | 6 | @Ishwarpatra | 9 | 9 |
-| 7 | @ritiktyagiai | 7 | 7 |
+| 7 | @ritiktyagiai | 8 | 8 |
 | 8 | @aditijha509 | 6 | 6 |
 | 9 | @love25-codes | 6 | 6 |
 | 10 | @JaiHarsan | 5 | 5 |
@@ -184,14 +184,15 @@ See the `LICENSE` file for complete details.
 | 24 | @CharlapallyDivyani | 1 | 1 |
 | 25 | @Laasya2007 | 1 | 1 |
 | 26 | @PulkitSachdev25 | 1 | 1 |
-| 27 | @Shlok-Dwivedi | 1 | 1 |
-| 28 | @Vanshikaram | 1 | 1 |
-| 29 | @vishakhaojha57 | 1 | 1 |
-| 30 | @architsinghal0005 | 1 | 1 |
-| 31 | @helen1806 | 1 | 1 |
-| 32 | @jahareena-06 | 1 | 1 |
-| 33 | @Shweta-Bairagi0312 | 1 | 1 |
-| 34 | @yhcb21 | 1 | 1 |
+| 27 | @Sargam-Ghagre | 1 | 1 |
+| 28 | @Shlok-Dwivedi | 1 | 1 |
+| 29 | @Vanshikaram | 1 | 1 |
+| 30 | @vishakhaojha57 | 1 | 1 |
+| 31 | @architsinghal0005 | 1 | 1 |
+| 32 | @helen1806 | 1 | 1 |
+| 33 | @jahareena-06 | 1 | 1 |
+| 34 | @Shweta-Bairagi0312 | 1 | 1 |
+| 35 | @yhcb21 | 1 | 1 |
 
 <!-- LEADERBOARD_END -->
 
