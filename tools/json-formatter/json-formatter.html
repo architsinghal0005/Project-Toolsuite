@@ -226,8 +226,12 @@ a:hover {
     <main>
         <section>
             <label>Input JSON</label>
-            <textarea id="jsonInput" placeholder="Paste your raw JSON here..." spellcheck="false"></textarea>
-            
+            <textarea
+                id="jsonInput"
+                placeholder="Paste your raw JSON here..."
+                spellcheck="false"
+                aria-label="JSON input"
+                ></textarea>
             <div class="controls">
                 <button id="formatBtn">Beautify (Format)</button>
                 <button id="minifyBtn">Minify (Compact)</button>
@@ -240,8 +244,12 @@ a:hover {
             <div id="status"></div>
 
             <label>Output</label>
-            <textarea id="jsonOutput" readonly placeholder="Processed JSON will appear here..."></textarea>
-            
+            <textarea
+                id="jsonOutput"
+                readonly
+                placeholder="Processed JSON will appear here..."
+                aria-label="Formatted JSON output"
+            ></textarea>
             <button id="copyBtn" style="width: auto; display: inline-block;">Copy Output</button>
         </section>
     </main>

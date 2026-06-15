@@ -13,7 +13,7 @@
     <meta name="twitter:title" content="OCR Scanner - Project Toolsuite">
     <meta name="twitter:description" content="Extract text from images locally and securely.">
     <meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/512/3522/3522262.png">
-    
+
     <link rel="stylesheet" href="../../assets/css/notifications.css">
     <script src="../../assets/js/notifications.js" defer></script>
     <style>
@@ -194,7 +194,7 @@ footer {
     }
 }
 
-    
+
     </style>
     <link rel="stylesheet" href="../../theme.css">
     <script src="../../theme.js"></script>
@@ -204,23 +204,38 @@ footer {
     <header>
         <h1>OCR Text Scanner</h1>
         <p>Extract text from images locally. Private. Secure. No server.</p>
-    
+
         <button class="dark-mode-toggle" onclick="toggleTheme()" id="themeBtn">DARK MODE</button></header>
 
     <main>
         <section>
-            <input type="file" id="fileInput" accept="image/*">
-            <input type="text"  id="imageUrl" placeholder=""or paste  an image URL here...>
+            <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                aria-label="Upload image for OCR"
+
+            >
+            <input
+                type="text"
+                id="imageUrl"
+                placeholder="or paste an image URL here..."
+                aria-label="Image URL input"
+
+            >
             <button id="loadUrlBtn">Load Image Url</button>
-            
+
             <div id="status-container">
                 <span id="status">System Status: Ready</span>
             </div>
 
             <progress id="progress" value="0" max="1" style="display:none;"></progress>
-            
-            <textarea id="output" placeholder="Recognized text will appear here..."></textarea>
-            
+
+            <textarea
+                id="output"
+                placeholder="Recognized text will appear here..."
+                aria-label="OCR output text"
+            ></textarea>
             <button id="copyBtn">Copy Text to Clipboard</button>
         </section>
     </main>
