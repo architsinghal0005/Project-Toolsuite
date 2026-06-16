@@ -1152,6 +1152,7 @@ function renderTags() {
     tagBox.appendChild(btn);
   });
 }
+
 function renderTools() {
   const rawQuery = document.getElementById("toolSearch").value.trim();
   if (!rawQuery) {
@@ -1168,7 +1169,7 @@ function renderTools() {
     return matchesSearch && matchesTag;
   });
 
-  // ✅ Tool count updates immediately
+  // Tool count updates immediately
   const count = filtered.length;
   document.getElementById("toolCount").textContent = count === 0 ? "0 tools found" : `${count} tool${count !== 1 ? "s" : ""} found`;
 
