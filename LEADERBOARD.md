@@ -2,12 +2,12 @@
 
 | Rank | Contributor | Points | Commits |
 |-----:|------------|-------:|--------:|
-| 1 | @Winter262005 | 266 | 266 |
+| 1 | @Winter262005 | 270 | 270 |
 | 2 | @VITianYash42 | 20 | 20 |
-| 3 | @rach-kanc | 14 | 14 |
-| 4 | @Dru-429 | 13 | 13 |
-| 5 | @Ishwarpatra | 10 | 10 |
-| 6 | @love25-codes | 10 | 10 |
+| 3 | @love25-codes | 19 | 19 |
+| 4 | @rach-kanc | 14 | 14 |
+| 5 | @Ishwarpatra | 13 | 13 |
+| 6 | @Dru-429 | 13 | 13 |
 | 7 | @AdityaMittal08 | 9 | 9 |
 | 8 | @adikulkarni006 | 8 | 8 |
 | 9 | @ritiktyagiai | 8 | 8 |
@@ -21,22 +21,23 @@
 | 17 | @ShaikhWarsi | 3 | 3 |
 | 18 | @SuyashSoni10 | 3 | 3 |
 | 19 | @Aharshi3614 | 2 | 2 |
-| 20 | @dishant62 | 2 | 2 |
-| 21 | @nikhil1205-ai | 2 | 2 |
-| 22 | @VedanshN | 2 | 2 |
-| 23 | @shreyagupta2006 | 2 | 2 |
-| 24 | @androidvitb | 1 | 1 |
-| 25 | @anshul-lh44 | 1 | 1 |
-| 26 | @CharlapallyDivyani | 1 | 1 |
-| 27 | @Laasya2007 | 1 | 1 |
-| 28 | @PulkitSachdev25 | 1 | 1 |
-| 29 | @Shlok-Dwivedi | 1 | 1 |
-| 30 | @Vanshikaram | 1 | 1 |
-| 31 | @vishakhaojha57 | 1 | 1 |
-| 32 | @architsinghal0005 | 1 | 1 |
-| 33 | @helen1806 | 1 | 1 |
-| 34 | @jahareena-06 | 1 | 1 |
-| 35 | @Shweta-Bairagi0312 | 1 | 1 |
-| 36 | @yhcb21 | 1 | 1 |
+| 20 | @AshutoshDash1999 | 2 | 2 |
+| 21 | @dishant62 | 2 | 2 |
+| 22 | @nikhil1205-ai | 2 | 2 |
+| 23 | @VedanshN | 2 | 2 |
+| 24 | @shreyagupta2006 | 2 | 2 |
+| 25 | @androidvitb | 1 | 1 |
+| 26 | @anshul-lh44 | 1 | 1 |
+| 27 | @CharlapallyDivyani | 1 | 1 |
+| 28 | @Laasya2007 | 1 | 1 |
+| 29 | @PulkitSachdev25 | 1 | 1 |
+| 30 | @Shlok-Dwivedi | 1 | 1 |
+| 31 | @Vanshikaram | 1 | 1 |
+| 32 | @vishakhaojha57 | 1 | 1 |
+| 33 | @architsinghal0005 | 1 | 1 |
+| 34 | @helen1806 | 1 | 1 |
+| 35 | @jahareena-06 | 1 | 1 |
+| 36 | @Shweta-Bairagi0312 | 1 | 1 |
+| 37 | @yhcb21 | 1 | 1 |
 
-_Last updated: Thu, 18 Jun 2026 04:18:43 GMT_
+_Last updated: Fri, 19 Jun 2026 04:46:42 GMT_
